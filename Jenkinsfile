@@ -1,26 +1,21 @@
 pipeline{
     agent any
     stages{
-        stage('Build'){
-            
-            step{
+        stage('Build'){   
+            steps{
                 echo "Etapa BUILD no disponible"
             }
         }
-        stage('Test'){
-            
-            step{
+        stage('Tests'){
+            steps{
                 echo "Etapa TEST no disponible"
             }
         }
-        
-        stage('Build'){
-            
-            step{
+        stage('Deploy'){     
+            steps{
                 sh "docker-compose down -v"
                 sh "docker-compose up -d --build"
             }
         }
-        
     }
 }
