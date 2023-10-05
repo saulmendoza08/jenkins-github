@@ -13,7 +13,7 @@ pipeline{
         }
         stage('Deploy'){     
             steps{
-                sh "etapa deplooy hecha"
+                echo "etapa deplooy hecha"
             }
         }
     }
